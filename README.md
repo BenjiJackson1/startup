@@ -23,6 +23,7 @@ the number of repetitions
 
 ### Design
 
+![Design] (ninjamock.png)
 
 ### Technologies
 
