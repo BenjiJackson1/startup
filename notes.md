@@ -24,3 +24,11 @@ Using the Caddy webservice, I can enable the Let's Encrypt service to allow my p
 to have a web certificate. This allows me to use the more secure HTTPS rather than simply
 using HTTP. Since the internet as a whole is moving towards more secure options, it is 
 important to use this service and provide a more secure connection.
+
+## 2. HTML Notes
+
+### HTML Structure Elements
+There are a variety of elements that can be used in HTML to provide structure to the
+elements that are included. These follow a hierarchical structure with different layers.
+It is easy to incorporate media and links into HTML as well. Each element is contained
+within a <> and a </>. This syntax is seen throughout the HTML file.
