@@ -18,3 +18,9 @@ Use the follow public IP address to access the server:
 The following command can be used to SSH into the server:
 - ssh -i [key pair file] ubuntu@[ip address]
 This server was set up using an elastic IP and the t3.nano instance of AWS EC2
+
+### HTTPS and TLS
+Using the Caddy webservice, I can enable the Let's Encrypt service to allow my project
+to have a web certificate. This allows me to use the more secure HTTPS rather than simply
+using HTTP. Since the internet as a whole is moving towards more secure options, it is 
+important to use this service and provide a more secure connection.
