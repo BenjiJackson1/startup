@@ -32,3 +32,8 @@ There are a variety of elements that can be used in HTML to provide structure to
 elements that are included. These follow a hierarchical structure with different layers.
 It is easy to incorporate media and links into HTML as well. Each element is contained
 within a <> and a </>. This syntax is seen throughout the HTML file.
+
+### HTML Input
+While it is not the most modern approach, HTML does allow for basic input intake that 
+can used on a webpage. There are sevearl different manners in which to do this, including
+checkboxes, radios, color selectors, file selection and more!
