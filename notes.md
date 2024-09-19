@@ -37,3 +37,9 @@ within a <> and a </>. This syntax is seen throughout the HTML file.
 While it is not the most modern approach, HTML does allow for basic input intake that 
 can used on a webpage. There are sevearl different manners in which to do this, including
 checkboxes, radios, color selectors, file selection and more!
+
+### HTML Media
+HTML allows for images, audio files and videos to be easily incorporated into the structure
+of a webpage. This process is relatively simply, although there are a few general rules of 
+thumb to remember such as setting the audio to be controlled so that it does not start 
+playing automatically and loop on repeat.
