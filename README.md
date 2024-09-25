@@ -17,7 +17,7 @@ did and how much weight they lifted, and to share those posts with others!
 * Login in securely through HTTPS
 * Create a post, specifying the various exercises performed, the weight, and 
 the number of repetitions
-* Post workout to a feed of other workouts
+* Post workout to a feed of other workouts through a separate post page
 * View the feed of workouts
 * "Like" the workouts of others on the feed
 
