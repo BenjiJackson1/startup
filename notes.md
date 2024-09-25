@@ -43,3 +43,12 @@ HTML allows for images, audio files and videos to be easily incorporated into th
 of a webpage. This process is relatively simply, although there are a few general rules of 
 thumb to remember such as setting the audio to be controlled so that it does not start 
 playing automatically and loop on repeat.
+
+## 3. HTML Startup
+
+### Deploying Files
+Through VSCode, I can deploy the HTML that I develop to the server and domain that I have 
+already set up. The command to do this deployment follows this format:
+./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
+I also learned that it is possible to use a Live Server view through VSCode that uses my 5500 port
+to temporarily display my HTML for development purposes.
