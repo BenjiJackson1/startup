@@ -17,5 +17,57 @@
         <hr />
     </header>
 
+    <main>
+        <div>
+            <span>Workout Date:</span>
+            <input type="text" placeholder="current_date_&_time" />
+        </div>
+
+        <form>
+            <label for="workout_type">Choose a workout:</label>
+            <select id="workout" name="workout">
+                <optgroup label="Chest">
+                    <option value="chest_press">Chest Press</option>
+                    <option value="chest_fly">Chest Fly</option>
+                    <option value="push_ups">Push Ups</option>
+                </optgroup>
+                <optgroup label="Arms">
+                    <option value="dum_curl">Dumbell Curls</option>
+                    <option value="barb_curl">Barbell Curls</option>
+                    <option value="hammer">Hammer Curls</option>
+                </optgroup>
+                <optgroup label="Legs">
+                    <option value="press">Leg Press</option>
+                    <option value="extension">Leg Extension</option>
+                </optgroup>
+            </select>
+        </form>
+
+        <div>
+            <span>Number of Repetitions:</span>
+            <input type="text" placeholder="0" />
+        </div>
+
+        <div>
+            <span>Weight (1):</span>
+            <input type="text" placeholder="0 lbs" />
+        </div>
+
+        <div>
+            <span>Weight (2):</span>
+            <input type="text" placeholder="0 lbs" />
+        </div>
+        
+        <button> POST! </button>
+        
+    </main>
+
+    <footer>
+        <hr />
+        <span class="text-reset">Benji Jackson - Startup Project</span>
+        <br />
+        <a href="https://github.com/BenjiJackson1/startup">My GitHub</a>
+    </footer>
 
 </body>
+</html>
