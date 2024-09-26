@@ -52,3 +52,9 @@ already set up. The command to do this deployment follows this format:
 ./deployFiles.sh -k <yourpemkey> -h <yourdomain> -s startup
 I also learned that it is possible to use a Live Server view through VSCode that uses my 5500 port
 to temporarily display my HTML for development purposes.
+
+### Learned While Creating HTML Startup
+I learned about the importance of first thinking about the overall structure elements of
+the HTML page. It is helpful to section off the pages into chunks, such as header,
+main body and footer, and then move into those chunks and add the smaller details.
+Doing this reflects the general format of HTML code so this makes for easier development.
