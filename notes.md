@@ -58,3 +58,11 @@ I learned about the importance of first thinking about the overall structure ele
 the HTML page. It is helpful to section off the pages into chunks, such as header,
 main body and footer, and then move into those chunks and add the smaller details.
 Doing this reflects the general format of HTML code so this makes for easier development.
+
+## 4. CSS Notes
+
+### CSS Animation
+CSS allows for me to stylize and even animate the structure that I create using HTML.
+The primary way that this can be done is by referencing the tags, IDs, and class 
+types of the different sections, and then assigning specific details to those references.
+Using CSS I can add color, font type, font size, animation and more formatting.
