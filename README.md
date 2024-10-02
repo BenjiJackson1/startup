@@ -54,3 +54,10 @@ that are signed in to view the posts on the feed.
 
 7. Websocket
 - Likes made by one user are shared to other users on the feed
+
+### Changes Made with HTML Deliverable
+While implementing my HTML deliverable, I changed the sign in feature from being
+a same page drop down to being handled on a completely different page. Additionally,
+the user's option to create a post is handled by another new page rather than
+being a pop up. Finally, I chose to incorporate small heart icons next to the
+like count for each post.
