@@ -62,7 +62,7 @@ the user's option to create a post is handled by another new page rather than
 being a pop up. Finally, I chose to incorporate small heart icons next to the
 like count for each post.
 
-# Important Notes:
+Important Notes:
 - The real time communication portion of the startup comes from the likes feature
   for each post on the feed. Likes will be displayed and counted in real time, and
   users will be able to click the like icon to add a like to the existing like count.
