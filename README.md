@@ -61,3 +61,11 @@ a same page drop down to being handled on a completely different page. Additiona
 the user's option to create a post is handled by another new page rather than
 being a pop up. Finally, I chose to incorporate small heart icons next to the
 like count for each post.
+
+# Important Notes:
+- The real time communication portion of the startup comes from the likes feature
+  for each post on the feed. Likes will be displayed and counted in real time, and
+  users will be able to click the like icon to add a like to the existing like count.
+- The 3rd Party service call will be called during the login process. Users login in
+  will be verified through Google, and thus when the login process is occuring there will
+  be a call to the API that Google has for authenticating logins.
