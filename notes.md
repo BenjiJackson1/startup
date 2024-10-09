@@ -69,3 +69,8 @@ Using CSS I can add color, font type, font size, animation and more formatting.
 
 ## 5. JavaScript Notes
 
+### JavaScript DOM
+The Document Object Model or DOM in JavaScript allows the browser to render
+the display. Thie DOM can be used dynamically to change the HTML that appears
+on a page. In order to access the DOM file for a page, it can be referenced
+through the term "document".
