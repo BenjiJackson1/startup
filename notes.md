@@ -66,3 +66,6 @@ CSS allows for me to stylize and even animate the structure that I create using 
 The primary way that this can be done is by referencing the tags, IDs, and class 
 types of the different sections, and then assigning specific details to those references.
 Using CSS I can add color, font type, font size, animation and more formatting.
+
+## 5. JavaScript Notes
+
