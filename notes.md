@@ -67,6 +67,11 @@ The primary way that this can be done is by referencing the tags, IDs, and class
 types of the different sections, and then assigning specific details to those references.
 Using CSS I can add color, font type, font size, animation and more formatting.
 
+## CSS Simon
+Through the process of uploading the Simon CSS File I learned more about the 
+structure generally found in applications that have CSS. Each html file has 
+an associated CSS file that typically matches the name with the .css prefix.
+
 ## 5. JavaScript Notes
 
 ### JavaScript DOM
