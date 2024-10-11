@@ -1,4 +1,11 @@
-.LeftAlign{
-    align-items: right;
-    color:red;
+header {
+    padding: 30px;
+}
+
+header h3 {
+    float: center;
+}
+
+header a {
+    float: right;
 }
