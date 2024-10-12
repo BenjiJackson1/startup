@@ -22,3 +22,21 @@ header a {
     text-align: left;
     width: 60%;
 }
+
+.vertical-text {
+    position: absolute !important;
+    top: 140px !important;
+    bottom: 0;
+    width: 150px;
+    font-size: 80px;
+    color: rgba(0, 0, 0, 0.1); /* Light color for visibility */
+    text-align: center;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
