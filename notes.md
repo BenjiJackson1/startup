@@ -72,6 +72,12 @@ Through the process of uploading the Simon CSS File I learned more about the
 structure generally found in applications that have CSS. Each html file has 
 an associated CSS file that typically matches the name with the .css prefix.
 
+## CSS Deliverable
+While doing the CSS deliverable I learned the inherent power of using bootstrap,
+it was something that I often found to be more intuitive than having a separate
+CSS file. I also learned about using !important tags on CSS styles to give 
+styles more precedance.
+
 ## 5. JavaScript Notes
 
 ### JavaScript DOM
@@ -79,3 +85,4 @@ The Document Object Model or DOM in JavaScript allows the browser to render
 the display. Thie DOM can be used dynamically to change the HTML that appears
 on a page. In order to access the DOM file for a page, it can be referenced
 through the term "document".
+
