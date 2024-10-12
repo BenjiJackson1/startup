@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J4CK3D HTML</title>
 
-    <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="post.css" />
+    <link rel="stylesheet" href="main.css" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
@@ -27,47 +27,50 @@
     </header>
 
     <main class="container-fluid text-center bg-info">
-        <div>
-            <span>Workout Date:</span>
-            <input type="text" placeholder="current_date_&_time" />
-        </div>
+        <div class="seventy_size">
+            <div class="input-group mb-3">
+                <span class="input-group-text">Workout Date:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="current_date_&_time" />
+            </div>
 
-        <form>
-            <label for="workout_type">Choose a workout:</label>
-            <select id="workout" name="workout">
-                <optgroup label="Chest">
-                    <option value="chest_press">Chest Press</option>
-                    <option value="chest_fly">Chest Fly</option>
-                    <option value="push_ups">Push Ups</option>
-                </optgroup>
-                <optgroup label="Arms">
-                    <option value="dum_curl">Dumbell Curls</option>
-                    <option value="barb_curl">Barbell Curls</option>
-                    <option value="hammer">Hammer Curls</option>
-                </optgroup>
-                <optgroup label="Legs">
-                    <option value="press">Leg Press</option>
-                    <option value="extension">Leg Extension</option>
-                </optgroup>
-            </select>
-        </form>
+            <div>
+                <select class="form-select form-select-lg mb-3">
+                    <option selected>Workout Type</option>
+                    <option value="1">Dumbell Chest Press</option>
+                    <option value="2">Chest Fly</option>
+                    <option value="3">Leg Press</option>
+                    <option value="4">Leg Extensions</option>
+                    <option value="5">Pullups</option>
+                  </select>
+            </div>
 
-        <div>
-            <span>Number of Repetitions:</span>
-            <input type="text" placeholder="0" />
-        </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Number of Sets:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="2" />
+            </div>
 
-        <div>
-            <span>Weight (1):</span>
-            <input type="text" placeholder="0 lbs" />
-        </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Number of Repetitions:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="0" />
+            </div>
 
-        <div>
-            <span>Weight (2):</span>
-            <input type="text" placeholder="0 lbs" />
-        </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Weight:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
+            </div>
         
-        <a href="feed.html" class="btn btn-dark"> POST! </a>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Number of Repetitions:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="0" />
+            </div>
+
+            <div class="input-group mb-3">
+                <span class="input-group-text">Weight:</span>
+                <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
+            </div>
+            
+            <a href="feed.html" class="btn btn-dark"> POST! </a>
+        </div>
 
     </main>
 
