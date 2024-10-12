@@ -9,3 +9,15 @@ header h3 {
 header a {
     float: right;
 }
+
+.mylabel {
+    width: 100%;
+}
+
+.workout-container{
+    background-color: aliceblue;
+    padding: 20px;
+    margin: 10 px 0;
+    border-radius: 8 px;
+    text-align: left;
+}
