@@ -75,16 +75,16 @@ In this portion of the project I used bootstrap and CSS to style my application
 and give it the polish of a final product. I was able to add a cohesive color
 scheme and style to the page as well as add some aesthetic elements.
 
--[x] Header, footer, and main content body were styled properly
--[x] Navigation elements were styled, I added properly coded buttons to all of 
+- [x] Header, footer, and main content body were styled properly
+- [x] Navigation elements were styled, I added properly coded buttons to all of 
 the anchor elements for navigating between pages
--[x] Responsive to window resizing - the page scales appropriately when the 
+- [x] Responsive to window resizing - the page scales appropriately when the 
 window size is changed
--[x] Application elements - I employed different colors to give the application
+- [x] Application elements - I employed different colors to give the application
 a professional and uniform feel, I also added text banners of the name of the 
 application down the sides of the feed for aesthetic appeal
--[x] Application text content - Text has the same font and is appropriately
+- [x] Application text content - Text has the same font and is appropriately
 scaled throughout the application
--[x] Application images - I removed the Arizona banner from the bottom of every
+- [x] Application images - I removed the Arizona banner from the bottom of every
 page and left a tributory smaller image on the post page in the footer that 
 is appropriately styled
