@@ -88,9 +88,37 @@ through the term "document".
 
 ## 7. Midterm Preparation
 
-- Come back to: promise, DNS
+- Come back to: promise
 - The "-la" in ls allows you to see even hidden files
 - Web certificates are necessary to use HTTPS
 - DNS records that will map domain names to IP addresses (A records) or
   other domain names (CNAME records), cannot map to another domain if not
    using CNAME which allows for aliasing.
+- In the domain name: banana.fruit.bozo.click, the top level = click
+  subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- ssh = Create a secure shell on a remote compute
+- echo - Output the parameters of the command
+- cd = Change directory
+- mkdir = Make directory
+- rmdir = Remove directory
+- rm = Remove file(s)
+- mv = Move file(s)
+- cp = Copy files
+- ls = List files
+- curl - Command line client URL browser
+- grep - Regular expression search
+- find - Find files
+- top - View running processes with CPU and memory usage
+- df - View disk statistics
+- cat - Output the contents of a file
+- less - Interactively output the contents of a file
+- wc - Count the words in a file
+- ps - View the currently running processes
+- kill - Kill a currently running process
+- sudo - Execute a command as a super user (admin)
+- scp - Securely copy files to a remote computer
+- history - Show the history of commands
+- ping - Check if a website is up
+- tracert - Trace the connections to a website
+- dig - Show the DNS information for a domain
+- man - Look up a command in the manual
