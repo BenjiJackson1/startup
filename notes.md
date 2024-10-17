@@ -86,3 +86,11 @@ the display. Thie DOM can be used dynamically to change the HTML that appears
 on a page. In order to access the DOM file for a page, it can be referenced
 through the term "document".
 
+## 7. Midterm Preparation
+
+- Come back to: promise, DNS
+- The "-la" in ls allows you to see even hidden files
+- Web certificates are necessary to use HTTPS
+- DNS records that will map domain names to IP addresses (A records) or
+  other domain names (CNAME records), cannot map to another domain if not
+   using CNAME which allows for aliasing.
