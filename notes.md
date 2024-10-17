@@ -96,6 +96,17 @@ through the term "document".
    using CNAME which allows for aliasing.
 - In the domain name: banana.fruit.bozo.click, the top level = click
   subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- A JSON document contains one of the following data types:
+
+Type	Example
+string	"crockford"
+number	42
+boolean	true
+array	[null,42,"crockford"]
+object	{"a":1,"b":"crockford"}
+null	null
+Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes.
+
 - ssh = Create a secure shell on a remote compute
 - echo - Output the parameters of the command
 - cd = Change directory
