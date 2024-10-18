@@ -102,6 +102,9 @@ through the term "document".
    using CNAME which allows for aliasing.
 - In the domain name: banana.fruit.bozo.click, the top level = click
   subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- To use JavaScript to change font color, use these script tags:
+    const element = document.getElementById("byu");
+    element.style.color = "green";
 - To include JavaScript in HTML, use the script tag
 - JavaScript objects: Once declared you can add properties to the object by simply referencing the property name in an assignment. Any type of variable can be assigned to a property. This includes a sub-object, array, or function. The properties of an object can be referenced either with dot (obj.prop) or bracket notation (obj['prop']).
 - JavaScript objects can be made in two ways:
