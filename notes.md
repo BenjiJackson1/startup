@@ -89,6 +89,12 @@ through the term "document".
 ## 7. Midterm Preparation
 
 - Come back to: promise
+- To declare the document type as HTML, you use the <!DOCTYPE html> declaration at the very beginning of your HTML document.
+- HTML opening tags:
+  - paragrah: <p>
+  - ordered list: <ol>
+  - unordered list: <ul>
+  - second level heading: <h2>
 - The "-la" in ls allows you to see even hidden files
 - Web certificates are necessary to use HTTPS
 - DNS records that will map domain names to IP addresses (A records) or
@@ -101,6 +107,11 @@ through the term "document".
 - JavaScript objects can be made in two ways:
     - Object literal notation:
         const obj = { property1: 'value1', /n property2: 'value2' /n method1: function() {console.log('MY method'};}}
+    - new operator:
+        const obj = new Object({a:3});
+        obj.b = 'value2';
+- Switch statements in JavaScript:
+    switch(expression) { case value1: ... break; case value2: ... break; default: }
 - A JSON document contains one of the following data types:
 
 Type	Example
