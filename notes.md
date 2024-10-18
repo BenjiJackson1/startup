@@ -91,10 +91,10 @@ through the term "document".
 - Come back to: promise
 - To declare the document type as HTML, you use the <!DOCTYPE html> declaration at the very beginning of your HTML document.
 - HTML opening tags:
-  - paragrah: <p>
-  - ordered list: <ol>
-  - unordered list: <ul>
-  - second level heading: <h2>
+  - paragrah: "<p>"
+  - ordered list: "<ol>"
+  - unordered list: "<ul>"
+  - second level heading: "<h2>"
 - The "-la" in ls allows you to see even hidden files
 - Web certificates are necessary to use HTTPS
 - DNS records that will map domain names to IP addresses (A records) or
