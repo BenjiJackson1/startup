@@ -89,7 +89,22 @@ through the term "document".
 ## 7. Midterm Preparation
 
 - Come back to: promise
+- Link element:
+  - The primary use of the link element is to link external CSS stylesheets to an HTML document. This allows you to apply styles defined in the CSS file to your HTML elements.
+  - Rel Attribute: The rel attribute specifies the relationship between the current document and the linked resource. For stylesheets, the value is typically "stylesheet".
 - To declare the document type as HTML, you use the <!DOCTYPE html> declaration at the very beginning of your HTML document.
+- Div:
+ - The div tag in HTML is a container element that is used to group together other HTML elements. It is a block-level element, meaning it starts on a new line and takes up the full width available by default. By wrapping elements in a div, you can apply CSS styles to the entire group. For example, you can set a background color, padding, margin, or other styles to the <div>, affecting all child elements inside it.
+- Padding:
+  - Padding is the space between the content of an element and its border. It creates an internal buffer within the element itself.
+  - Padding is applied inside the element, affecting the space surrounding the content (text, images, etc.) but within the element's border.
+  - The padding area inherits the background color of the element. If the element has a background color, it will extend into the padding area.
+  - Increasing padding increases the overall size of the element because it adds space within the border.
+- Margin:
+  - Margin is the space outside an element's border. It creates a buffer between the element and other surrounding elements.
+  - Margin is applied outside the element, affecting the space between it and other elements or the edge of the container.
+  - The margin area is always transparent. It does not inherit the background color of the element.
+  - Increasing the margin does not change the size of the element itself; it simply adds space around it.
 - HTML opening tags:
   - paragrah: "p"
   - ordered list: "ol"
@@ -101,11 +116,30 @@ through the term "document".
    a href="https://www.example.com" target="_blank"
     img src="image.jpg" alt="Description of the image"
 /a
+- Just a normal image without a link would use img tag with alt and src inside of it
 - DNS records that will map domain names to IP addresses (A records) or
   other domain names (CNAME records), cannot map to another domain if not
    using CNAME which allows for aliasing.
 - In the domain name: banana.fruit.bozo.click, the top level = click
   subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- In JavaScript, using a # selector typically refers to selecting an HTML element by its ID. For example, if you see a line like this:
+  - const element = document.querySelector('#myElement');
+  - Here's what it does:
+      document.querySelector: This method selects the first element in the document that matches the specified CSS selector.
+  - This line of code retrieves the first element with the ID myElement and assigns it to the variable element. You can then manipulate this element using JavaScript, such as changing its content, style, or attributes.
+- Arrow functions are more concise functions in JavaScript, if you use curly braces you need to say return or else it will be undefined output. They do not have their own this context, and they require less code because there is no "function" written out
+- map:	Run a function to map an array to a new array	a.map(i => i+i)
+- You can change the box-sizing CSS property from the default value of content-box to border-box in order to redefine the width and height to also include the padding and the border. This often makes it easier to style elements when their visual size matches their actual size. The padding will inherit things like the background color, it will take on the background color of the parent element if the element itself does not have its own background color defined.
+- Using action listeners:
+  - const submitDataEl = document.querySelector('#submitData');
+submitDataEl.addEventListener('click', function (event) {
+  console.log(event.type);
+});
+- DOM in JavaScript:
+   - The Document Object Model (DOM) is an object representation of the HTML elements that the browser uses to render the display. The browser also exposes the DOM to external code so that you can write programs that dynamically manipulate the HTML. The browser provides access to the DOM through a global variable name document that points to the root element of the DOM. If you open the browser's debugger console window and type the variable name document you will see the DOM for the document the browser is currently rendering.
+   - For everything in an HTML document there is a node in the DOM. This includes elements, attributes, text, comments, and whitespace. All of these nodes form a big tree, with the document node at the top.
+   - The DOM supports the ability to insert, modify, or delete the elements in the DOM. To create a new element you first create the element on the DOM document. You then insert the new element into the DOM tree by appending it to an existing element in the tree. To delete elements call the removeChild function on the parent element.
+   - The DOM also allows you to inject entire blocks of HTML into an element. The following code finds the first div element in the DOM and replaces all the HTML it contains. If you are injecting HTML, make sure that it cannot be manipulated by a user. Common injection paths include HTML input controls, URL parameters, and HTTP headers. 
 - In the CSS box model, the ordering of the box layers starting from the inside and working out is as follows:
 Content: This is the innermost layer where text, images, and other media reside.
 Padding: This layer surrounds the content and creates space between the content and the border. Padding is transparent.
@@ -113,6 +147,7 @@ Border: This layer surrounds the padding (if any) and the content. It can have a
 Margin: This is the outermost layer that creates space between the border of the element and the adjacent elements. Margins are also transparent.
 Content → Padding → Border → Margin
 
+- By default, the HTML span element has a CSS display property value of inline. This means that it does not start on a new line and only takes up as much width as necessary, allowing other elements to sit beside it in the flow of the document.
 - To use JavaScript to change font color, use these script tags:
     const element = document.getElementById("byu");
     element.style.color = "green";
