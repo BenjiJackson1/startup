@@ -97,11 +97,22 @@ through the term "document".
   - second level heading: "h2"
 - The "-la" in ls allows you to see even hidden files
 - Web certificates are necessary to use HTTPS
+- To create an image with a hyperlink:
+   a href="https://www.example.com" target="_blank"
+    img src="image.jpg" alt="Description of the image"
+/a
 - DNS records that will map domain names to IP addresses (A records) or
   other domain names (CNAME records), cannot map to another domain if not
    using CNAME which allows for aliasing.
 - In the domain name: banana.fruit.bozo.click, the top level = click
   subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- In the CSS box model, the ordering of the box layers starting from the inside and working out is as follows:
+Content: This is the innermost layer where text, images, and other media reside.
+Padding: This layer surrounds the content and creates space between the content and the border. Padding is transparent.
+Border: This layer surrounds the padding (if any) and the content. It can have a specified width, style, and color.
+Margin: This is the outermost layer that creates space between the border of the element and the adjacent elements. Margins are also transparent.
+Content → Padding → Border → Margin
+
 - To use JavaScript to change font color, use these script tags:
     const element = document.getElementById("byu");
     element.style.color = "green";
