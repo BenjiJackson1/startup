@@ -96,15 +96,20 @@ through the term "document".
    using CNAME which allows for aliasing.
 - In the domain name: banana.fruit.bozo.click, the top level = click
   subdomain = banana.fruit, and root domain = bozo.click ( root has TL included as well)
+- To include JavaScript in HTML, use the script tag
+- JavaScript objects: Once declared you can add properties to the object by simply referencing the property name in an assignment. Any type of variable can be assigned to a property. This includes a sub-object, array, or function. The properties of an object can be referenced either with dot (obj.prop) or bracket notation (obj['prop']).
+- JavaScript objects can be made in two ways:
+    - Object literal notation:
+        const obj = { property1: 'value1', /n property2: 'value2' /n method1: function() {console.log('MY method'};}}
 - A JSON document contains one of the following data types:
 
 Type	Example
-string	"crockford"
-number	42
-boolean	true
-array	[null,42,"crockford"]
-object	{"a":1,"b":"crockford"}
-null	null
+string:	"crockford";
+number:	42;
+boolean:	true;
+array:	[null,42,"crockford"];
+object:	{"a":1,"b":"crockford"};
+null:	null;
 Most commonly, a JSON document contains an object. Objects contain zero or more key value pairs. The key is always a string, and the value must be one of the valid JSON data types. Key value pairs are delimited with commas. Curly braces delimit an object, square brackets and commas delimit arrays, and strings are always delimited with double quotes.
 
 - ssh = Create a secure shell on a remote compute
