@@ -86,6 +86,13 @@ the display. Thie DOM can be used dynamically to change the HTML that appears
 on a page. In order to access the DOM file for a page, it can be referenced
 through the term "document".
 
+## 7. React Notes
+
+### React Routers
+I will use react-router-dom Version 6 in this course. These allow me to create
+one page applications that can dynamically update and use different paths to 
+give the appearance of being full fledged multipage applications.
+
 ## 7. Midterm Preparation
 
 - Come back to: promise
