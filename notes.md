@@ -93,7 +93,18 @@ I will use react-router-dom Version 6 in this course. These allow me to create
 one page applications that can dynamically update and use different paths to 
 give the appearance of being full fledged multipage applications.
 
-## 7. Midterm Preparation
+## 8. Vite
+
+Vite bundles your code quickly, has great debugging support, and allows you 
+to easily support JSX, TypeScript, and different CSS flavors.
+
+Here are the commands to create the dev demo for Vite:
+npm create vite@latest demoVite -- --template react
+cd demoVite
+npm install
+npm run dev
+
+## 9. Midterm Preparation
 
 - Come back to: promise
 - Link element:
