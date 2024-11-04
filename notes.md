@@ -104,7 +104,12 @@ cd demoVite
 npm install
 npm run dev
 
-## 9. Midterm Preparation
+## 9. Fetch
+
+Fetch allows for me to interact with other API and use the data from them within my program.
+If I do not specify the respoonse, it will default to get.
+
+## 10. Midterm Preparation
 
 - Come back to: promise
 - Link element:
