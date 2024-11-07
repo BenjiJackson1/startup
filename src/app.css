@@ -1,7 +1,8 @@
-body {
+.body {
     display: flex;
     flex-direction: column;
     min-width: 375px;
+    height: 100vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -19,6 +20,22 @@ main {
     justify-content: space-around;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }  
+
+menu {
+  flex: 1;
+  display: flex;
+  /*  overwrite Bootstrap so the menu does not wrap */
+  flex-direction: row !important;
+  list-style: none;
+}
+.navbar-brand {
+  padding-left: 0.3em;
+  border-bottom: solid rgb(182, 182, 182) thin;
+}
+  
+menu .nav-item {
+  padding: 0 0.3em;
+}
 
 footer {
     flex: 0 50px;
