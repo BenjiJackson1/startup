@@ -9,9 +9,9 @@ import { Feed } from './feed/feed';
 export default function App() {
     return (
     <BrowserRouter>
-    <div className='bg-light'>
+    <div className='body bg-info'>
     <header className='container-fluid'>
-        <nav className='navbar fixed-top bg-info'>
+        <nav className='navbar fixed-top bg-light'>
           <div className='navbar-brand'>
           J4CK3D 💪<sup>&reg;</sup>
           </div>
