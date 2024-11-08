@@ -46,7 +46,7 @@ export function Post() {
                 <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
             </div>
             
-            <a href="feed.html" class="btn btn-dark"> POST! </a>
+            <a href="feed" class="btn btn-dark"> POST! </a>
         </div>
 
     </main>

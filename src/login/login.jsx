@@ -6,9 +6,9 @@ export function Login() {
     <main className="container-fluid text-center bg-info">
         <div>
             <h3> J4CK3D Login: </h3>
-            <form method="get" action="feed.html">
+            <form method="get" action="feed">
                 <div className="input-group mb-3">
-                    <span class="input-group-text">Username:</span>
+                    <span className="input-group-text">Username:</span>
                     <input className="form-control" type="text" placeholder="username" />
                 </div>
                 <div class="input-group mb-3">
