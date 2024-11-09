@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import './feed.css';
 
 export function Feed({workouts, setWorkouts}) {
 
   useEffect(() => {
-    const interval = setInterval(() => {
+     setInterval(() => {
       const newWorkouts = workouts.slice();
       newWorkouts[1][2] = workouts[1][2] +1;
       newWorkouts[0][2] = workouts[0][2] +1;
