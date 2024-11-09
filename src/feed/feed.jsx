@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './feed.css';
 
 export function Feed() {
@@ -6,6 +6,15 @@ export function Feed() {
   const [workouts, setWorkouts] = useState([['UserX32', '9/23/2024 at 12:07 PM', 0,[['Dumbell Chest Press', [['10', '80'], ['12', '80'], ['12', '75']]],
   ['Dumbell Fly', [['100', '800'], ['120', '800']]]]],
   ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newWorkouts = workouts.slice();
+      newWorkouts[1][2] = workouts[1][2] +1;
+      newWorkouts[0][2] = workouts[0][2] +1;
+      setWorkouts(newWorkouts);
+    }, 10000);
+  },);
 
   function addLike(i){
     const newWorkouts = workouts.slice();
