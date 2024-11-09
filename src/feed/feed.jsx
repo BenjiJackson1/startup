@@ -7,6 +7,12 @@ export function Feed() {
   ['Dumbell Fly', [['100', '800'], ['120', '800']]]]],
   ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])
 
+  function addLike(i){
+    const newWorkouts = workouts.slice();
+    newWorkouts[i][2] = workouts[i][2] +1;
+    setWorkouts(newWorkouts);
+  }
+
   return (
     <main className="container-fluid text-center bg-info">
       <div className="container-fluid bg-warning mylabel">
@@ -28,7 +34,7 @@ export function Feed() {
               ))}
             </div>
           ))}
-          <p className="btn btn-dark"> Like This Post ❤️({workout[2]})</p>
+          <button className="btn btn-dark" onClick={() => addLike(index)}> Like This Post ❤️({workout[2]})</button>
           </div>
         </div>
       ))}
