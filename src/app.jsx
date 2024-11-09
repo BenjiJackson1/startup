@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './app.css';
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
@@ -7,6 +7,10 @@ import { Post } from './post/post';
 import { Feed } from './feed/feed';
 
 export default function App() {
+
+    const [workouts, setWorkouts] = useState([['UserX32', '9/23/2024 at 12:07 PM', 0,[['Dumbell Chest Press', [['10', '80'], ['12', '80'], ['12', '75']]],
+      ['Dumbell Fly', [['100', '800'], ['120', '800']]]]],
+      ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])
     return (
     <BrowserRouter>
     <div className='body bg-info'>
@@ -30,7 +34,7 @@ export default function App() {
       </header>
       <Routes>
         <Route path='/' element={<Login />} exact />
-        <Route path='/feed' element={<Feed />} />
+        <Route path='/feed' element={<Feed workouts={workouts} setWorkouts={setWorkouts}/>}/>
         <Route path='/post' element={<Post />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
