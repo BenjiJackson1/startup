@@ -3,9 +3,9 @@ import './feed.css';
 
 export function Feed() {
 
-  const [workouts, setWorkouts] = useState([['UserX32', '9/23/2024 at 12:07 PM', [['Dumbell Chest Press', [['10', '80'], ['12', '80'], ['12', '75']]],
+  const [workouts, setWorkouts] = useState([['UserX32', '9/23/2024 at 12:07 PM', 0,[['Dumbell Chest Press', [['10', '80'], ['12', '80'], ['12', '75']]],
   ['Dumbell Fly', [['100', '800'], ['120', '800']]]]],
-  ['JJean', '9/21/2024 at 11:50 PM', [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])
+  ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])
 
   return (
     <main className="container-fluid text-center bg-info">
@@ -17,17 +17,18 @@ export function Feed() {
           <div>
           <h4> Post by: {workout[0]}</h4>
           <p> {workout[1]}</p>
-          {workout[2].map((exercise, i) => (
+          {workout[3].map((exercise, i) => (
             <div key={i} className="workout-section workout">
               <h4> {exercise[0]} </h4>
               <p> Sets: {exercise[1].length} </p>
               {exercise[1].map((rep, j) => (
-                <div key={j}>
-                  <p>{rep[0]} reps at {rep[1]}</p>
-                </div>
+                <ul key={j}>
+                  <li>{rep[0]} reps at {rep[1]} lbs</li>
+                </ul>
               ))}
             </div>
           ))}
+          <p className="btn btn-dark"> Like This Post ❤️({workout[2]})</p>
           </div>
         </div>
       ))}
