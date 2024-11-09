@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import './post.css';
 
 export function Post({workouts,setWorkouts}) {
-  const [exercises, setExercises] = useState([])
+  const [exercises, setExercises] = useState(['',[]])
   const [date, setDate] = useState('')
+  const [sets, setSets] = useState(0)
   
   return (
     <main class="container-fluid text-center bg-info">
@@ -14,19 +15,19 @@ export function Post({workouts,setWorkouts}) {
             </div>
 
             <div>
-                <select class="form-select form-select-lg mb-3">
-                    <option selected>Workout Type</option>
-                    <option value="1">Dumbell Chest Press</option>
-                    <option value="2">Chest Fly</option>
-                    <option value="3">Leg Press</option>
-                    <option value="4">Leg Extensions</option>
-                    <option value="5">Pullups</option>
+                <select class="form-select form-select-lg mb-3" value={exercises[0]} onChange = {(e) => (setExercises([e.target.value, exercises[1]]))}>
+                    <option value="" disabled>Workout Type</option>
+                    <option value="Dumbell Chest Press">Dumbell Chest Press</option>
+                    <option value="Chest Fly">Chest Fly</option>
+                    <option value="Leg Press">Leg Press</option>
+                    <option value="Leg Extensions">Leg Extensions</option>
+                    <option value="Pullups">Pullups</option>
                   </select>
             </div>
 
             <div class="input-group mb-3">
                 <span class="input-group-text">Number of Sets:</span>
-                <input class="form-control form-control-lg" type="text" placeholder="2" />
+                <input class="form-control form-control-lg" type="text" value={sets} onInput={(e)=>(setSets(e.target.value))} placeholder="" />
             </div>
 
             <div class="input-group mb-3">
@@ -56,7 +57,7 @@ export function Post({workouts,setWorkouts}) {
                 <input type="submit" value="send" onClick={() => pass}/>
               </div>
             </form>
-            <button href="feed" onClick={() => setWorkouts([...workouts, ['unkown user', date, 0, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])}  class="btn btn-dark"> POST! </button>
+            <button href="feed" onClick={() => setWorkouts([...workouts, ['unkown user', date, 0, [[exercises[0], [['10', '130'], ['12', '140'], ['12', '125']]]]]])}  class="btn btn-dark"> POST! </button>
         </div>
 
     </main>
