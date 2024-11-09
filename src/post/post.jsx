@@ -8,8 +8,20 @@ export function Post({ workouts, setWorkouts }) {
   const [exerDetails, setExerDetails] = useState(['0', '0'])
 
   useEffect(() => {
-    setExerDetails(new Array(sets).fill(['0', '0']));
+    setExerDetails(new Array(sets).fill(null).map(() => ['0', '0']));
   }, [sets]);
+
+  const repsChange = (num, index) => {
+    const newExer = exerDetails.slice();
+    newExer[index][0] = num;
+    setExerDetails(newExer);
+  }
+
+  const weightChange = (num, index) => {
+    const newExer = exerDetails.slice();
+    newExer[index][1] = num;
+    setExerDetails(newExer);
+  }
 
   return (
     <main class="container-fluid text-center bg-info">
@@ -39,12 +51,12 @@ export function Post({ workouts, setWorkouts }) {
           <div key={index}>
             <div class="input-group mb-3">
               <span class="input-group-text">Number of Repetitions:</span>
-              <input class="form-control form-control-lg" type="text" value={exer[0]} onInput={(e) => repsChange(e, index)} placeholder="0" />
+              <input class="form-control form-control-lg" type="text" value={exer[0]} onInput={(e) => repsChange(e.target.value, index)} placeholder="0" />
             </div>
 
             <div class="input-group mb-3">
               <span class="input-group-text">Weight:</span>
-              <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
+              <input class="form-control form-control-lg" type="text" onInput={(e) => weightChange(e.target.value, index)} placeholder="0 lbs" />
             </div>
           </div>
         ))}
