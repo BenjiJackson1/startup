@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './post.css';
 
 export function Post({workouts,setWorkouts}) {
+  const [exercises, setExercises] = useState([])
+  const [date, setDate] = useState('')
+  
   return (
     <main class="container-fluid text-center bg-info">
         <div class="seventy_size">
             <div class="input-group mb-3">
                 <span class="input-group-text">Workout Date:</span>
-                <input class="form-control form-control-lg" type="text" placeholder="current_date_&_time" />
+                <input class="form-control form-control-lg" type="text" value={date} onInput = {(e) => (setDate(e.target.value))} placeholder="current_date_&_time" />
             </div>
 
             <div>
@@ -53,7 +56,7 @@ export function Post({workouts,setWorkouts}) {
                 <input type="submit" value="send" onClick={() => pass}/>
               </div>
             </form>
-            <button href="feed" onClick={() => setWorkouts([...workouts, ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])}  class="btn btn-dark"> POST! </button>
+            <button href="feed" onClick={() => setWorkouts([...workouts, ['unkown user', date, 0, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])}  class="btn btn-dark"> POST! </button>
         </div>
 
     </main>
