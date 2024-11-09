@@ -18,7 +18,7 @@ export function Feed() {
           <h4> Post by: {workout[0]}</h4>
           <p> {workout[1]}</p>
           {workout[2].map((exercise, i) => (
-            <div key={index} className="workout-section workout">
+            <div key={i} className="workout-section workout">
               <h4> {exercise[0]} </h4>
               <p> Sets: {exercise[1].length} </p>
               {exercise[1].map((rep, j) => (
