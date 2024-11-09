@@ -4,13 +4,15 @@ import './feed.css';
 export function Feed({workouts, setWorkouts}) {
 
   useEffect(() => {
-     setInterval(() => {
+     const interval = setInterval(() => {
       const newWorkouts = workouts.slice();
       newWorkouts[1][2] = workouts[1][2] +1;
       newWorkouts[0][2] = workouts[0][2] +1;
       setWorkouts(newWorkouts);
     }, 10000);
-  },);
+    
+  return () => clearInterval(interval);
+  }, [workouts, setWorkouts]);
 
   function addLike(i){
     const newWorkouts = workouts.slice();

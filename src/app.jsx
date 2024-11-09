@@ -35,7 +35,7 @@ export default function App() {
       <Routes>
         <Route path='/' element={<Login />} exact />
         <Route path='/feed' element={<Feed workouts={workouts} setWorkouts={setWorkouts}/>}/>
-        <Route path='/post' element={<Post />} />
+        <Route path='/post' element={<Post workouts={workouts} setWorkouts={setWorkouts}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <footer className='bg-light'>

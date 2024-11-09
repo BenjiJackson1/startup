@@ -1,7 +1,7 @@
 import React from 'react';
 import './post.css';
 
-export function Post() {
+export function Post({workouts,setWorkouts}) {
   return (
     <main class="container-fluid text-center bg-info">
         <div class="seventy_size">
@@ -45,8 +45,15 @@ export function Post() {
                 <span class="input-group-text">Weight:</span>
                 <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
             </div>
-            
-            <a href="feed" class="btn btn-dark"> POST! </a>
+            <form>
+              <div>
+                <label for="test">Workout time</label>
+              </div>
+              <div>
+                <input type="submit" value="send" onClick={() => pass}/>
+              </div>
+            </form>
+            <button href="feed" onClick={() => setWorkouts([...workouts, ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]])}  class="btn btn-dark"> POST! </button>
         </div>
 
     </main>
