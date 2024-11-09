@@ -5,10 +5,10 @@ export function Post({ workouts, setWorkouts }) {
   const [exercises, setExercises] = useState(['', []])
   const [date, setDate] = useState('')
   const [sets, setSets] = useState(0)
-  const [exerDetails, setExerDetails] = useState(['', ''])
+  const [exerDetails, setExerDetails] = useState(['0', '0'])
 
   useEffect(() => {
-    setExerDetails(new Array(sets).fill(['', '']));
+    setExerDetails(new Array(sets).fill(['0', '0']));
   }, [sets]);
 
   return (
@@ -39,7 +39,7 @@ export function Post({ workouts, setWorkouts }) {
           <div key={index}>
             <div class="input-group mb-3">
               <span class="input-group-text">Number of Repetitions:</span>
-              <input class="form-control form-control-lg" type="text" placeholder="0" />
+              <input class="form-control form-control-lg" type="text" value={exer[0]} onInput={(e) => repsChange(e, index)} placeholder="0" />
             </div>
 
             <div class="input-group mb-3">
@@ -48,25 +48,6 @@ export function Post({ workouts, setWorkouts }) {
             </div>
           </div>
         ))}
-        <div class="input-group mb-3">
-          <span class="input-group-text">Number of Repetitions:</span>
-          <input class="form-control form-control-lg" type="text" placeholder="0" />
-        </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Weight:</span>
-          <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
-        </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Number of Repetitions:</span>
-          <input class="form-control form-control-lg" type="text" placeholder="0" />
-        </div>
-
-        <div class="input-group mb-3">
-          <span class="input-group-text">Weight:</span>
-          <input class="form-control form-control-lg" type="text" placeholder="0 lbs" />
-        </div>
         <button href="feed" onClick={() => setWorkouts([...workouts, ['unkown user', date, 0, [[exercises[0], exerDetails]]]])} class="btn btn-dark"> POST! </button>
       </div>
 
