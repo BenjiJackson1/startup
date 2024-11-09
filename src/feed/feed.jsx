@@ -13,8 +13,8 @@ export function Feed() {
         <h2> WORKOUT FEED</h2>
       </div>
       {workouts.map((workout, index) => (
-        <div key={index} className="workout-section">
-          <div className="workout-container mt-3">
+        <div key={index} className="workout-container mt-3">
+          <div>
           <h4> Post by: {workout[0]}</h4>
           <p> {workout[1]}</p>
           {workout[2].map((exercise, i) => (
