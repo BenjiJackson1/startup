@@ -88,3 +88,20 @@ scaled throughout the application
 - [x] Application images - I removed the Arizona banner from the bottom of every
 page and left a tributory smaller image on the post page in the footer that 
 is appropriately styled
+
+## React Deliverable
+In this portion of the project I used React and JavaScript to make my 
+application work dynamically to render posts and allow for liking of posts.
+
+- [x] Bundled and transpiled - works!
+- [x] Components - login, post and feed pages are all components
+  - [x] Login - Clicking on the login button takes you to the feed page
+  - [x] Database - Displays the posts and the like counts for each with the 
+  details for the post such as reps and weight for each exercise.
+  - [x] Websocket - The setinterval function simulates post getting liked
+  by periodically increasing like counts on the posts
+  - [x] Application logic - Posts that a user makes on the post page show up
+  on the feed of posts
+- [x] Router - Router moves between the feed, post and login page
+- [x] Hooks - UseStates are used to track changes in the exercises posted to 
+the feed and the likes that those posts have
