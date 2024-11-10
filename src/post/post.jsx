@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './post.css';
+import { useNavigate } from 'react-router-dom';
+
 
 export function Post({ workouts, setWorkouts }) {
   const [exercises, setExercises] = useState(['', []])
@@ -13,15 +15,17 @@ export function Post({ workouts, setWorkouts }) {
 
   const repsChange = (num, index) => {
     const newExer = exerDetails.slice();
-    newExer[index][0] = num;
+    newExer[index][0] = Number(num);
     setExerDetails(newExer);
   }
 
   const weightChange = (num, index) => {
     const newExer = exerDetails.slice();
-    newExer[index][1] = num;
+    newExer[index][1] = Number(num);
     setExerDetails(newExer);
   }
+  
+  const postPage = useNavigate();
 
   return (
     <main class="container-fluid text-center bg-info">
@@ -60,7 +64,8 @@ export function Post({ workouts, setWorkouts }) {
             </div>
           </div>
         ))}
-        <button href="feed" onClick={() => setWorkouts([...workouts, ['unkown user', date, 0, [[exercises[0], exerDetails]]]])} class="btn btn-dark"> POST! </button>
+        <button onClick={() => {
+    setWorkouts([...workouts, ['unknown user', date, 0, [[exercises[0], exerDetails]]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
 
     </main>
