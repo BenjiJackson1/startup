@@ -5,6 +5,7 @@ const app = express();
 // The scores and users are saved in memory and disappear whenever the service is restarted.
 let users = {};
 let scores = [];
+let workouts = [['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]];
 
 // The service port. In production the front-end code is statically hosted by the service on the same port.
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -64,6 +65,11 @@ apiRouter.post('/score', (req, res) => {
   scores = updateScores(req.body, scores);
   res.send(scores);
 });
+
+// GetWorkouts
+apiRouter.get('/workouts', (_req, res) => {
+    res.send(workouts);
+  });
 
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {

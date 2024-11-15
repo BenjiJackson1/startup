@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './feed.css';
 
 export function Feed({workouts, setWorkouts}) {
@@ -20,11 +20,49 @@ export function Feed({workouts, setWorkouts}) {
     setWorkouts(newWorkouts);
   }
 
+  const [test, setTest] = useState([]);
+  React.useEffect(() => {
+    fetch('/api/workouts')
+      .then((response) => response.json())
+      .then((test) => {
+        setTest(test);
+      });
+  }, []);
+
+  const addedworkouts = [];
+  if (test.length){
+    for (let thing of test){
+      addedworkouts.push(thing)
+    }
+  } else {
+    addedworkouts.push(['Example', '1/1/2001 at 11:11 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]])
+  }
+
   return (
     <main className="container-fluid text-center bg-info">
       <div className="container-fluid bg-warning mylabel">
         <h2> WORKOUT FEED</h2>
       </div>
+      {addedworkouts.map((workout, index) => (
+        <div key={index} className="workout-container mt-3">
+          <div>
+          <h4> Post by: {workout[0]}</h4>
+          <p> {workout[1]}</p>
+          {workout[3].map((exercise, i) => (
+            <div key={i} className="workout-section workout">
+              <h4> {exercise[0]} </h4>
+              <p> Sets: {exercise[1].length} </p>
+              {exercise[1].map((rep, j) => (
+                <ul key={j}>
+                  <li>{rep[0]} reps at {rep[1]} lbs</li>
+                </ul>
+              ))}
+            </div>
+          ))}
+          <button className="btn btn-dark" onClick={() => addLike(index)}> Like This Post ❤️({workout[2]})</button>
+          </div>
+        </div>
+      ))}
       {workouts.map((workout, index) => (
         <div key={index} className="workout-container mt-3">
           <div>
