@@ -72,8 +72,6 @@ export function Post({ workouts, setWorkouts }) {
             </div>
           </div>
         ))}
-        <button onClick={() => {
-    setWorkouts([...workouts, ['unknown user', date, 0, [[exercises[0], exerDetails]]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
     <button onClick={() => {
     saveWorkout(['unknown user', date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
