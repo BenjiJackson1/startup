@@ -73,7 +73,7 @@ export function Post({ workouts, setWorkouts }) {
           </div>
         ))}
     <button onClick={() => {
-    saveWorkout(['unknown user', date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
+    saveWorkout(['G User', date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
 
     </main>
