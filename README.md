@@ -105,3 +105,18 @@ application work dynamically to render posts and allow for liking of posts.
 - [x] Router - Router moves between the feed, post and login page
 - [x] Hooks - UseStates are used to track changes in the exercises posted to 
 the feed and the likes that those posts have
+
+## Startup Deliverable
+In this portion of the project I implemented a service that allows for posts
+and their like counts to persist, the feed can be added to and likes increased!
+
+- [x] Create an HTTP service using Node.js and Express - completed!
+- [x] Frontend served up using Express static middleware - completed!
+- [x] Calls third party service endpoints - completed!
+  - Call is made to "techy" api that gives a randomized tech related quote
+  that is displayed in the footer.
+- [x] Backend service endpoints - completed! 
+  - Endpoints for storing the workouts and their associated like counts
+- [x] Frontend calls service endpoints - completed!
+  - Fetch functions are used to retrieve workouts and they are displayed on 
+  the feed page.
