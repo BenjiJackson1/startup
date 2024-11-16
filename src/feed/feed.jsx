@@ -70,26 +70,6 @@ export function Feed({workouts, setWorkouts}) {
           </div>
         </div>
       ))}
-      {workouts.map((workout, index) => (
-        <div key={index} className="workout-container mt-3">
-          <div>
-          <h4> Post by: {workout[0]}</h4>
-          <p> {workout[1]}</p>
-          {workout[3].map((exercise, i) => (
-            <div key={i} className="workout-section workout">
-              <h4> {exercise[0]} </h4>
-              <p> Sets: {exercise[1].length} </p>
-              {exercise[1].map((rep, j) => (
-                <ul key={j}>
-                  <li>{rep[0]} reps at {rep[1]} lbs</li>
-                </ul>
-              ))}
-            </div>
-          ))}
-          <button className="btn btn-dark" onClick={() => addLike(index)}> Like This Post ❤️({workout[2]})</button>
-          </div>
-        </div>
-      ))}
     </main>
   );
 }
