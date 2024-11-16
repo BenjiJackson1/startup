@@ -14,6 +14,15 @@ export default function App() {
 
     const [quote, setQuote] = React.useState('Loading...');
 
+    React.useEffect(() => {
+      fetch('https://techy-api.vercel.app/api/json')
+        .then((response) => response.json())
+        .then((data) => {
+          setQuote(data.message);
+        })
+        .catch();
+    }, []);
+
     return (
     <BrowserRouter>
     <div className='body bg-info'>
@@ -41,10 +50,10 @@ export default function App() {
         <Route path='/post' element={<Post workouts={workouts} setWorkouts={setWorkouts}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-      <footer className='bg-light'>
-      <div className="container-fluid">
+      <footer className="bg-light footer">
+        <div className="container-fluid">
             <span className="text-reset">Benji Jackson - Startup Project</span>
-            <span className="text-rest"> {...quote} </span>
+            <span className="text-rest quote"> {...quote} </span>
             <a className="text-reset" href="https://github.com/BenjiJackson1/startup">My GitHub</a>
         </div>
       </footer>

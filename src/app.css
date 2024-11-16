@@ -46,6 +46,13 @@ footer {
 footer a {
     float: right;
   }
+
+  .footer .quote {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    float: center;
+  }
   
 @media (max-height: 600px) {
     header {
