@@ -77,6 +77,12 @@ apiRouter.post('/workouts', (req, res) => {
     res.send(workouts);
   });
 
+// Change workout like count
+apiRouter.patch('/workouts', (req, res) =>{
+    const {index} = req.body;
+    workouts[index][2] = workouts[index][2]+1;
+    res.send(workouts);
+})
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });

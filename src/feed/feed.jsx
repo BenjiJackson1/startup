@@ -3,16 +3,16 @@ import './feed.css';
 
 export function Feed({workouts, setWorkouts}) {
 
-  useEffect(() => {
-     const interval = setInterval(() => {
-      const newWorkouts = workouts.slice();
-      newWorkouts[1][2] = workouts[1][2] +1;
-      newWorkouts[0][2] = workouts[0][2] +1;
-      setWorkouts(newWorkouts);
-    }, 10000);
+  // useEffect(() => {
+  //    const interval = setInterval(() => {
+  //     const newWorkouts = workouts.slice();
+  //     newWorkouts[1][2] = workouts[1][2] +1;
+  //     newWorkouts[0][2] = workouts[0][2] +1;
+  //     setWorkouts(newWorkouts);
+  //   }, 10000);
     
-  return () => clearInterval(interval);
-  }, [workouts, setWorkouts]);
+  // return () => clearInterval(interval);
+  // }, [workouts, setWorkouts]);
 
   function addLike(i){
     const newWorkouts = workouts.slice();
@@ -38,6 +38,13 @@ export function Feed({workouts, setWorkouts}) {
     addedworkouts.push(['Example', '1/1/2001 at 10:10 PM', 10, [['Example workout', [['10', '100'], ['10', '100'], ['10', '100']]]]])
   }
 
+  async function updateLikes(index) {
+    await fetch('/api/workouts', {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({index}),
+    });}
+
   return (
     <main className="container-fluid text-center bg-info">
       <div className="container-fluid bg-warning mylabel">
@@ -59,7 +66,7 @@ export function Feed({workouts, setWorkouts}) {
               ))}
             </div>
           ))}
-          <button className="btn btn-dark" onClick={() => addLike(index)}> Like This Post ❤️({workout[2]})</button>
+          <button className="btn btn-dark" onClick={() => updateLikes(index)}> Like This Post ❤️({workout[2]})</button>
           </div>
         </div>
       ))}
