@@ -14,12 +14,6 @@ export function Feed({workouts, setWorkouts}) {
   // return () => clearInterval(interval);
   // }, [workouts, setWorkouts]);
 
-  function addLike(i){
-    const newWorkouts = workouts.slice();
-    newWorkouts[i][2] = workouts[i][2] +1;
-    setWorkouts(newWorkouts);
-  }
-
   const [test, setTest] = useState([]);
   React.useEffect(() => {
     fetch('/api/workouts')
