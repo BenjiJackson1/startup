@@ -81,7 +81,7 @@ apiRouter.post('/workouts', (req, res) => {
 apiRouter.patch('/workouts', (req, res) =>{
     const {index} = req.body;
     workouts[index][2] = workouts[index][2]+1;
-    res.send(workouts);
+    res.send(workouts[index]);
 })
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {

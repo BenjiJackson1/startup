@@ -39,11 +39,18 @@ export function Feed({workouts, setWorkouts}) {
   }
 
   async function updateLikes(index) {
-    await fetch('/api/workouts', {
+    const response = await fetch('/api/workouts', {
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({index}),
-    });}
+    })
+    const updatedWorkout = await response.json();
+    setTest((oldTest) =>{
+      const newAll = test.slice();
+      newAll[index] = updatedWorkout;
+      return newAll;
+    });
+    }
 
   return (
     <main className="container-fluid text-center bg-info">
