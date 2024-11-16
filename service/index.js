@@ -71,6 +71,12 @@ apiRouter.get('/workouts', (_req, res) => {
     res.send(workouts);
   });
 
+// SubmitWorkout
+apiRouter.post('/workouts', (req, res) => {
+    workouts.push(req.body)
+    res.send(workouts);
+  });
+
 // Return the application's default page if the path is unknown
 app.use((_req, res) => {
   res.sendFile('index.html', { root: 'public' });

@@ -35,7 +35,7 @@ export function Feed({workouts, setWorkouts}) {
       addedworkouts.push(thing)
     }
   } else {
-    addedworkouts.push(['Example', '1/1/2001 at 11:11 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]])
+    addedworkouts.push(['Example', '1/1/2001 at 10:10 PM', 10, [['Example workout', [['10', '100'], ['10', '100'], ['10', '100']]]]])
   }
 
   return (
