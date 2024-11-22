@@ -13,6 +13,9 @@ export default function App() {
       ['JJean', '9/21/2024 at 11:50 PM', 15, [['Leg Press', [['10', '130'], ['12', '140'], ['12', '125']]]]]]);
 
     const [quote, setQuote] = React.useState('Loading...');
+    const [userName, setUserName] = React.useState(localStorage.getItem('userName') || '');
+    const currentAuthState = userName ? AuthState.Authenticated : AuthState.Unauthenticated;
+    const [authState, setAuthState] = React.useState(currentAuthState);
 
     React.useEffect(() => {
       fetch('https://techy-api.vercel.app/api/json')
