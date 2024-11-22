@@ -5,6 +5,7 @@ import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import { Login } from './login/login';
 import { Post } from './post/post';
 import { Feed } from './feed/feed';
+import { AuthState } from './login/authState';
 
 export default function App() {
 
@@ -48,11 +49,17 @@ export default function App() {
         </nav>
       </header>
       <Routes>
-        <Route path='/' element={<Login />} exact />
+        <Route path='/' element={<Login userName={userName}
+                authState={authState}
+                onAuthChange={(userName, authState) => {
+                  setAuthState(authState);
+                  setUserName(userName);
+                }}/>} exact />
         <Route path='/feed' element={<Feed workouts={workouts} setWorkouts={setWorkouts}/>}/>
         <Route path='/post' element={<Post workouts={workouts} setWorkouts={setWorkouts}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
+
       <footer className="bg-light footer">
         <div className="container-fluid">
             <span className="text-reset">Benji Jackson - Startup Project</span>
