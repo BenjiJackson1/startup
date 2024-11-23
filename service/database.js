@@ -59,11 +59,16 @@ async function addUserWorkout(workout) {
   return workoutCollection.insertOne(workout)
 }
 
+function getUserWorkouts() {
+  return workoutCollection.find({}).toArray();
+}
+
 module.exports = {
   getUser,
   getUserByToken,
   createUser,
   addScore,
   getHighScores,
-  addUserWorkout
+  addUserWorkout,
+  getUserWorkouts
 };

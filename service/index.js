@@ -101,11 +101,17 @@ apiRouter.post('/workouts', (req, res) => {
     res.send(workouts);
   });
 
+// GetUserWorkout
+secureApiRouter.get('/userworkouts', async (req, res) => {
+  const workouts = await DB.getUserWorkouts();
+  res.send(workouts);
+});
+  
 // SubmitUserWorkout
 secureApiRouter.post('/userworkouts', async (req, res) => {
   const workouts = { ...req.body, ip: req.ip };
   await DB.addUserWorkout(workouts);
-  const workout = await DB.getHighScores();
+  const workout = await DB.getUserWorkouts();
   res.send(workout);
 });
 
