@@ -8,7 +8,7 @@ const client = new MongoClient(url, { tls: true, serverSelectionTimeoutMS: 3000,
 const db = client.db('startup');
 const userCollection = db.collection('user');
 const scoreCollection = db.collection('score');
-const workoutCollection = db.collection('userWorkouts')
+const workoutCollection = db.collection('userWorkouts');
 
 // This will asynchronously test the connection and exit the process if it fails
 (async function testConnection() {

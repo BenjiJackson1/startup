@@ -36,15 +36,13 @@ export function Post(props) {
       body: JSON.stringify(newWorkout),
     });}
 
-  async function newsaveWorkout(score) {
-    const date = new Date().toLocaleDateString();
-    const newScore = { name: userName, score: score, date: date };
-
-    await fetch('/api/score', {
+  async function newsaveWorkout(workout) {
+    const newScore = workout
+    await fetch('/api/userworkouts', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(newScore),
-    });
+    });}
 
   return (
     <main className="container-fluid text-center bg-info">
@@ -85,7 +83,10 @@ export function Post(props) {
         ))}
     <button onClick={() => {
     saveWorkout([userName1, date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
+    <button onClick={() => {
+    newsaveWorkout([userName1, date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
+      
 
     </main>
   );
