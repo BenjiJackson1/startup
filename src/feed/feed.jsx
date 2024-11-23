@@ -16,7 +16,7 @@ export function Feed({workouts, setWorkouts}) {
 
   const [test, setTest] = useState([]);
   React.useEffect(() => {
-    fetch('/api/workouts')
+    fetch('/api/userworkouts')
       .then((response) => response.json())
       .then((test) => {
         setTest(test);
