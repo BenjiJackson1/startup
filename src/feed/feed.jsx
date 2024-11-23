@@ -33,7 +33,7 @@ export function Feed({workouts, setWorkouts}) {
   }
 
   async function updateLikes(index) {
-    const response = await fetch('/api/userworkouts', {
+    const response = await fetch('/api/workouts', {
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({index}),
@@ -45,6 +45,22 @@ export function Feed({workouts, setWorkouts}) {
       return newAll;
     });
     }
+
+  async function updateLikesNew(index) {
+    const response = await fetch('/api/userworkouts', {
+      method: 'PATCH',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify({index}),
+    })
+    const updatedWorkout = await response.json();
+    setTest((oldTest) =>{
+      const newAll = test.slice();
+      newAll[index] = updatedWorkout;
+      return newAll;
+    });
+    console.log("did it");
+    console.log(response.ok);
+  }
 
   return (
     <main className="container-fluid text-center bg-info">
@@ -67,7 +83,7 @@ export function Feed({workouts, setWorkouts}) {
               ))}
             </div>
           ))}
-          <button className="btn btn-dark" onClick={() => updateLikes(index)}> Like This Post ❤️({workout[2]})</button>
+          <button className="btn btn-dark" onClick={() => updateLikesNew(index)}> Like This Post ❤️({workout[2]})</button>
           </div>
         </div>
       ))}
