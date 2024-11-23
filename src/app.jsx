@@ -42,9 +42,11 @@ export default function App() {
             <li className='nav-item'>
                 <NavLink className='nav-link' to='feed'>Feed</NavLink>
             </li>
+            {authState === AuthState.Authenticated && (
             <li className='nav-item'>
                 <NavLink className='nav-link' to='post'>Post</NavLink>
             </li>
+            )}
           </menu>
         </nav>
       </header>
