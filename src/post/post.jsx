@@ -36,6 +36,16 @@ export function Post(props) {
       body: JSON.stringify(newWorkout),
     });}
 
+  async function newsaveWorkout(score) {
+    const date = new Date().toLocaleDateString();
+    const newScore = { name: userName, score: score, date: date };
+
+    await fetch('/api/score', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newScore),
+    });
+
   return (
     <main className="container-fluid text-center bg-info">
       <div className="seventy_size">

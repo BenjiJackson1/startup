@@ -101,6 +101,14 @@ apiRouter.post('/workouts', (req, res) => {
     res.send(workouts);
   });
 
+// SubmitUserWorkout
+secureApiRouter.post('/userworkouts', async (req, res) => {
+  const workout = { ...req.body, ip: req.ip };
+  await DB.addUserWorkouts(workouts);
+  const workouts = await DB.getHighScores();
+  res.send(workouts);
+});
+
 // Change workout like count
 apiRouter.patch('/workouts', (req, res) =>{
     const {index} = req.body;
