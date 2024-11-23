@@ -21,6 +21,10 @@ main {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }  
 
+.playerName {
+  color: black;
+}
+
 menu {
   flex: 1;
   display: flex;
