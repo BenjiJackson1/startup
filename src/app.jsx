@@ -58,7 +58,7 @@ export default function App() {
                   setUserName(userName);
                 }}/>} exact />
         <Route path='/feed' element={<Feed workouts={workouts} setWorkouts={setWorkouts}/>}/>
-        <Route path='/post' element={<Post workouts={workouts} setWorkouts={setWorkouts}/>} />
+        <Route path='/post' element={<Post userName={userName}/>} />
         <Route path='*' element={<NotFound />} />
       </Routes>
 

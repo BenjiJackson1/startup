@@ -3,7 +3,8 @@ import './post.css';
 import { useNavigate } from 'react-router-dom';
 
 
-export function Post({ workouts, setWorkouts }) {
+export function Post(props) {
+  const userName1 = props.userName || 'GUEST';
   const [exercises, setExercises] = useState(['', []])
   const [date, setDate] = useState('')
   const [sets, setSets] = useState(0)
@@ -73,7 +74,7 @@ export function Post({ workouts, setWorkouts }) {
           </div>
         ))}
     <button onClick={() => {
-    saveWorkout(['G User', date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
+    saveWorkout([userName1, date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
 
     </main>
