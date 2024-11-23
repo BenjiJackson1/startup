@@ -33,7 +33,7 @@ export function Feed({workouts, setWorkouts}) {
   }
 
   async function updateLikes(index) {
-    const response = await fetch('/api/workouts', {
+    const response = await fetch('/api/userworkouts', {
       method: 'PATCH',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({index}),

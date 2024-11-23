@@ -115,6 +115,13 @@ secureApiRouter.post('/userworkouts', async (req, res) => {
   res.send(workout);
 });
 
+sercureApiRouter.patch('/userworkouts', async (req, res) => {
+  const {index} = req.body;
+  await DB.updateWorkout(index);
+  const updatedWorkouts = await DB.getUserWorkouts();
+  res.send(updatedWorkouts[index]);
+});
+
 // Change workout like count
 apiRouter.patch('/workouts', (req, res) =>{
     const {index} = req.body;

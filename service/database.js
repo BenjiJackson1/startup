@@ -59,6 +59,12 @@ async function addUserWorkout(workout) {
   return workoutCollection.insertOne(workout)
 }
 
+async function updateWorkout(index) {
+  const workouts = await getUserWorkouts();
+  const workout = workouts(index)
+  return workoutCollection.updateOne({_id: workout._id}, {$inc:{'data.2': 1}})
+}
+
 function getUserWorkouts() {
   return workoutCollection.find({}).toArray();
 }
@@ -70,5 +76,6 @@ module.exports = {
   addScore,
   getHighScores,
   addUserWorkout,
-  getUserWorkouts
+  getUserWorkouts,
+  updateWorkout
 };
