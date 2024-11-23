@@ -106,7 +106,7 @@ application work dynamically to render posts and allow for liking of posts.
 - [x] Hooks - UseStates are used to track changes in the exercises posted to 
 the feed and the likes that those posts have
 
-## Startup Deliverable
+## Service Deliverable
 In this portion of the project I implemented a service that allows for posts
 and their like counts to persist, the feed can be added to and likes increased!
 
@@ -120,3 +120,19 @@ and their like counts to persist, the feed can be added to and likes increased!
 - [x] Frontend calls service endpoints - completed!
   - Fetch functions are used to retrieve workouts and they are displayed on 
   the feed page.
+
+## DB/Login Deliverable
+In this portion of the project I stored both user credentials as well as all
+user posts in MongoDB. This allows data to persist within the DB.
+
+- [x] MongoDB Atlas database created - completed!
+- [x] Stores application data in MongoDB - completed!
+- [x] New user registration - completed!
+  - New accounts are stored in my database.
+- [x] Existing user authentication and logout - completed! 
+  - Accounts that are signed in can be logged out of and signed into at a later
+  point
+- [x] Stores and retreives credentials in MongoDB - completed!  
+  - User accounts are stored as well as the posts that they make
+- [x] Restricts functionality - completed!  
+  - You cannot post or look at the feed without being authenticated
