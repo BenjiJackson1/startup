@@ -61,8 +61,7 @@ async function addUserWorkout(workout) {
 
 async function updateWorkout(index) {
   const workouts = await getUserWorkouts();
-  const workout = workouts[index]
-  console.log("UPDATED!!")
+  const workout = workouts[index];
   return workoutCollection.updateOne({_id: workout._id}, {$inc:{'2': 1}})
 }
 

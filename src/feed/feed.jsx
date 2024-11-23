@@ -58,8 +58,6 @@ export function Feed({workouts, setWorkouts}) {
       newAll[index] = updatedWorkout;
       return newAll;
     });
-    console.log("did it");
-    console.log(response.ok);
   }
 
   return (

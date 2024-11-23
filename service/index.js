@@ -117,7 +117,6 @@ secureApiRouter.post('/userworkouts', async (req, res) => {
 
 // UpdateLikeCount
 secureApiRouter.patch('/userworkouts', async (req, res) => {
-  console.log("received!!")
   const {index} = req.body;
   await DB.updateWorkout(index);
   const updatedWorkouts = await DB.getUserWorkouts();
