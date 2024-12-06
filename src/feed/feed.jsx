@@ -15,6 +15,40 @@ export function Feed({workouts, setWorkouts}) {
   // }, [workouts, setWorkouts]);
 
   const [test, setTest] = useState([]);
+  const [socket, setSocket] = useState(null);
+
+  useEffect(() => {
+    const protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
+    const ws = new WebSocket(`${protocol}://${window.location.hostname}:${window.location.port}/ws`);
+
+    ws.onopen = () => {
+      console.log('WebSocket connected');
+    };
+
+    ws.onmessage = (message) => {
+      const event = JSON.parse(message.data);
+      if (event.type === 'like') {
+        setTest((prevTest) => {
+          const newTest = [...prevTest];
+          if (newTest[event.index]) {
+            newTest[event.index][2] = event.likes;
+          }
+          return newTest;
+        });
+      }
+    };
+
+    ws.onclose = () => {
+      console.log('WebSocket disconnected');
+    };
+
+    setSocket(ws);
+
+    return () => {
+      ws.close();
+    };
+  }, []);
+
   React.useEffect(() => {
     fetch('/api/userworkouts')
       .then((response) => response.json())
@@ -58,6 +92,15 @@ export function Feed({workouts, setWorkouts}) {
       newAll[index] = updatedWorkout;
       return newAll;
     });
+    if (socket) {
+      socket.send(
+        JSON.stringify({
+          type: 'like',
+          index: index,
+          likes: updatedWorkout[2],
+        })
+      );
+    }
   }
 
   return (
