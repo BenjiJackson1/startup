@@ -3,17 +3,6 @@ import './feed.css';
 
 export function Feed({workouts, setWorkouts}) {
 
-  // useEffect(() => {
-  //    const interval = setInterval(() => {
-  //     const newWorkouts = workouts.slice();
-  //     newWorkouts[1][2] = workouts[1][2] +1;
-  //     newWorkouts[0][2] = workouts[0][2] +1;
-  //     setWorkouts(newWorkouts);
-  //   }, 10000);
-    
-  // return () => clearInterval(interval);
-  // }, [workouts, setWorkouts]);
-
   const [test, setTest] = useState([]);
   const [socket, setSocket] = useState(null);
 
@@ -65,20 +54,6 @@ export function Feed({workouts, setWorkouts}) {
   } else {
     addedworkouts.push(['Example', '1/1/2001 at 10:10 PM', 10, [['Example workout', [['10', '100'], ['10', '100'], ['10', '100']]]]])
   }
-
-  async function updateLikes(index) {
-    const response = await fetch('/api/workouts', {
-      method: 'PATCH',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({index}),
-    })
-    const updatedWorkout = await response.json();
-    setTest((oldTest) =>{
-      const newAll = test.slice();
-      newAll[index] = updatedWorkout;
-      return newAll;
-    });
-    }
 
   async function updateLikesNew(index) {
     const response = await fetch('/api/userworkouts', {
