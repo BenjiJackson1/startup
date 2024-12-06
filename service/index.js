@@ -4,6 +4,7 @@ const express = require('express');
 const uuid = require('uuid');
 const app = express();
 const DB = require('./database.js');
+const { peerProxy } = require('./peerProxy.js');
 
 const authCookieName = 'token';
 // The scores and users are saved in memory and disappear whenever the service is restarted.
@@ -175,3 +176,5 @@ function updateScores(newScore, scores) {
 
   return scores;
 }
+
+peerProxy(httpService);
