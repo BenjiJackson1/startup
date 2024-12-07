@@ -57,19 +57,19 @@ export function Post(props) {
 
         <div className="input-group mb-3">
           <span className="input-group-text">Number of Sets:</span>
-          <input className="form-control form-control-lg" type="text" value={sets} onInput={(e) => (setSets(Number(e.target.value)))} placeholder="" />
+          <input className="form-control form-control-lg" type="number" value={sets} onInput={(e) => (setSets(Number(e.target.value)))} placeholder="" />
         </div>
 
         {exerDetails.map((exer, index) => (
           <div key={index}>
             <div className="input-group mb-3">
               <span className="input-group-text">Number of Repetitions:</span>
-              <input className="form-control form-control-lg" type="text" value={exer[0]} onInput={(e) => repsChange(e.target.value, index)} placeholder="0" />
+              <input className="form-control form-control-lg" type="number" value={exer[0]} onInput={(e) => repsChange(e.target.value, index)} placeholder="0" />
             </div>
 
             <div className="input-group mb-3">
               <span className="input-group-text">Weight:</span>
-              <input className="form-control form-control-lg" type="text" onInput={(e) => weightChange(e.target.value, index)} placeholder="0 lbs" />
+              <input className="form-control form-control-lg" type="number" onInput={(e) => weightChange(e.target.value, index)} placeholder="0 lbs" />
             </div>
           </div>
         ))}
