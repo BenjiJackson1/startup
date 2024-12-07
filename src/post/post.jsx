@@ -28,14 +28,6 @@ export function Post(props) {
   
   const postPage = useNavigate();
 
-  async function saveWorkout(workout) {
-    const newWorkout = workout
-    await fetch('/api/workouts', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify(newWorkout),
-    });}
-
   async function newsaveWorkout(workout) {
     const newScore = workout
     await fetch('/api/userworkouts', {
