@@ -136,3 +136,14 @@ user posts in MongoDB. This allows data to persist within the DB.
   - User accounts are stored as well as the posts that they make
 - [x] Restricts functionality - completed!  
   - You cannot post or look at the feed without being authenticated
+
+## WebSocket Deliverable
+In this portion of the project I allowed for client to client communication 
+through the server and a websocket to support realtime updates to like count.
+
+- [x] Backend listens for WebSocket connection - completed!
+- [x] Frontend makes WebSocket connection - completed!
+- [x] Data sent over websocket connection - completed!
+  - Like counts are sent across the websocket connection.
+- [x] WebSocket Data is displayed in the application interface - completed! 
+  - Like counts for users posts are displayed in real time!
