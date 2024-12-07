@@ -14,8 +14,9 @@ export function Feed({workouts, setWorkouts}) {
       console.log('WebSocket connected');
     };
 
-    ws.onmessage = (message) => {
-      const event = JSON.parse(message.data);
+    ws.onmessage = async (message) => {
+      const text = await message.data.text();
+      const event = JSON.parse(text);
       if (event.type === 'like') {
         setTest((prevTest) => {
           const newTest = [...prevTest];
