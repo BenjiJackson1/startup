@@ -73,7 +73,7 @@ export function Post(props) {
             </div>
           </div>
         ))}
-    <button onClick={() => {
+    <button disabled={!date || !exercises[0]} onClick={() => {
     newsaveWorkout([userName1, date, 0, [[exercises[0], exerDetails]]]); postPage('/feed');}} className="btn btn-dark"> POST! </button>
       </div>
       
