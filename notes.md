@@ -1,5 +1,40 @@
 # Benji's Notes for CS260
 
+## FINAL PREP NOTES:
+
+- HTTP: Port 80, HTTPS: Port 443, SSH: Port 22
+- HTTP status codes:
+   - 300-399: Redirection ( 301 (Moved Permanently), 302 (Found), 304 (Not Modified))
+   - 400-499: Client Errors. Indicates that there was an error on the client side, such as a bad request or unauthorized access.
+   - 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 404 (Not Found), 409 (conflict) status code
+   - 500-599: Server Errors. Indicates that the server encountered an error and couldn't fulfill the request.
+   - 500 (Internal Server Error), 502 (Bad Gateway), 503 (Service Unavailable)
+- The Content-Type HTTP header specifies the media type of the content being sent in an HTTP request or response. This allows the client and server to correctly interpret and process the content.
+- Secure Cookie: A Secure Cookie is a cookie that is only transmitted over HTTPS connections. This ensures that the cookie data is encrypted during transmission, protecting it
+- HttpOnly Cookie: An HttpOnly Cookie is a cookie that is inaccessible to JavaScript running on the client-side. This prevents scripts (e.g., from cross-site scripting (XSS) attacks) from reading or manipulating the cookie.
+- Instead of storing the password directly, we want to cryptographically hash the password so that we never store the actual password. When we want to validate a password during login, we can hash the login password and compare it to our stored hash of the password. To hash our passwords we will use the bcrypt package. This creates a very secure one-way hash of the password.
+- The WebSocket protocol is designed to provide a full-duplex communication channel over a single TCP connection. It enables efficient, bidirectional communication between a client (typically a web browser) and a server in real-time, with minimal overhead compared to traditional HTTP-based methods.
+- JSX. Full Form: JavaScript XML. Description: A syntax extension for JavaScript that allows you to write HTML-like code within JavaScript. Commonly used in React for defining UI components.
+- NPM. Full Form: Node Package Manager. Description: A package manager for JavaScript that allows developers to share, download, and manage code libraries or dependencies for Node.js applications.
+- NVM. Full Form: Node Version Manager. Description: A tool for managing multiple versions of Node.js on the same system, making it easy to switch between versions as needed.
+- A React component using React.useState manages state within the component. The useState hook allows you to define a state variable and provides a way to update it, enabling React to re-render the component when the state changes.
+- Key Uses of React Hooks:
+  - State Management, Hook: useState. Allows functional components to manage local state.
+  - Side Effects, Hook: useEffect. Manages side effects like fetching data, updating the DOM, or setting up subscriptions.
+  - Context Access, Hook: useContext. Provides access to React's Context API to share data between components without prop drilling.
+  - Performance Optimization, Hook: useMemo. Memoizes expensive calculations to avoid unnecessary recomputations. Hook: useCallback Memoizes callback functions to prevent unnecessary re-creations.
+  - Refs for DOM Manipulation, Hook: useRef. Accesses or manipulates DOM elements or persists mutable values without re-rendering.
+- The package.json file is a critical file in any Node.js or JavaScript project. It provides metadata about the project and serves as a manifest to manage the project’s dependencies, scripts, and configurations.
+- The fetch function in JavaScript is used to make HTTP requests to servers. It provides a modern, promise-based way to interact with resources like APIs, enabling developers to send and receive data.
+- Node.js is an open-source, JavaScript runtime environment that enables you to run JavaScript code on the server-side, outside of the browser. It is built on the V8 JavaScript engine (the same engine used by Google Chrome) and allows developers to build scalable, high-performance applications.
+- PM2 is a production-ready process manager for Node.js applications. It is designed to manage and monitor applications in production environments, providing a robust and efficient way to keep applications running smoothly, especially in server environments.
+- Vite is a next-generation build tool and development server designed for modern web development. It provides a fast and optimized development experience by focusing on speed and performance for projects using technologies like JavaScript, TypeScript, Vue.js, React, and more. Vite bundles your code quickly, has great debugging support, and allows you to easily support JSX, TypeScript, and different CSS flavors.
+
+
+
+
+
+
 ## 1. GitHub Notes
 GitHub is a cloud based repository that allows for me to easily store and 
 modify the code I develop. One of the biggest benefits to using Git is that 
